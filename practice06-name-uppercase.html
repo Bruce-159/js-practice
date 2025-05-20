@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+
+<body>
+    <script>
+        let names = ["Tom", "Amy", "Ken", "Bella", "Sandy"];
+        let sum = 0;
+        names.forEach(function (name, index) {
+            console.log(`第 ${index + 1} 個名字是：${name.toUpperCase()}，字數為 ${name.length}`)
+            sum += name.length;
+        });
+        console.log(`所有名字的總字數是：${sum}`);
+    </script>
+</body>
+
+</html>
