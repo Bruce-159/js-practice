@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <script>
+        function countup (a){
+            for(let i=0;i<a;i++){
+                console.log(`這是第 ${i+1} 次執行`)
+            }
+        }
+        function countdown (b){
+            let i=b;
+            while(i>0){
+                console.log(`倒數第 ${i} 秒`)
+                i--;
+            }
+        }
+        let s=5;
+        countup(s);
+        countdown(s);
+        s=10;
+        countup(s);
+        countdown(s);
+    </script>
+</body>
+</html>

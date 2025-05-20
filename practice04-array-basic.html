@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+
+<body>
+    <script>
+        let fruits = ["Apple", "Banana", "Cherry", "Durian", "Entawak"];
+        //let l = fruits.length(不需要);
+        for (let i = 0; i < fruits.length; i++) {
+            console.log(`第${i + 1}個水果是：${fruits[i]}`)
+        }
+        fruits.forEach(function (fruit, index) {
+            console.log(`第 ${index + 1} 個水果是：${fruit}`);
+        });
+        fruits.forEach((fruit, index) => {
+            console.log(`第 ${index + 1} 個水果是：${fruit}`);
+        });
+        fruits.forEach((fruit, index) => {
+            console.log(`第 ${index + 1} 個水果是：${fruit.toUpperCase()}`);
+        });
+        //搞懂!
+        //fruits 是整個陣列的變數名稱，不要在 forEach 裡重複用同一個名稱。這樣會「看起來像是覆蓋掉原本的陣列」
+    </script>
+
+</body>
+
+</html>

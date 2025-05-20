@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+
+<body>
+    <script>
+        let fruits = [];
+        function print() {
+            for (let i = 0; i < fruits.length; i++) {
+                console.log(`第${i + 1}個水果是${fruits[i]}`)
+            }
+        }
+        fruits.push("Apple", "Banana");
+        print();
+        fruits.pop();
+        print();
+        fruits.unshift("Cherry");
+        print();
+        fruits.splice(2,0,"Durian");//0表示刪除的元素數量
+        print();
+    </script>
+
+</body>
+
+</html>
