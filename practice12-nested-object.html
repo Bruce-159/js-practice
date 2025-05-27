@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>練習 12 - 巢狀物件</title>
+</head>
+
+<body>
+    <script>
+        // 巢狀物件結構
+        let classroom = {
+            className: "資工系甲班",
+            students: [
+                { name: "Jiajun", age: 25, isStudent: false },
+                { name: "Amy", age: 20, isStudent: true },
+                { name: "Ken", age: 30, isStudent: false }
+            ]
+        };
+        classroom.students.forEach((student) => {
+            let role = student.isStudent ? "學生" : "社會人士";
+            console.log(`姓名：${student.name}，年齡：${student.age}，身份：${role}`);
+        });
+
+        console.log(`學生總數：${classroom.students.length}`);
+
+    </script>
+</body>
+
+</html>

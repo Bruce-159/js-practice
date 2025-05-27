@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+
+<body>
+    <script>
+        let students = [];
+        for (let keep=true; keep === true;) {
+            let name = prompt("請輸入你的名字：");
+            let age = Number(prompt("請輸入你的年齡："));
+            let studentInput = prompt("你是學生嗎？請輸入 yes 或 no");
+            let isStudent = studentInput === "yes";
+            students.push({
+                name: name,
+                age: age,
+                isStudent: isStudent
+            });
+            let keepInput = prompt("是否要繼續輸入?請輸入 yes 或 no");
+            keep = keepInput === "yes";
+        }
+        console.log(students);
+    </script>
+
+</body>
+
+</html>

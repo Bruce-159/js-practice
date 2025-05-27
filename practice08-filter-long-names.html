@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <script>
+        let names = ["Tom", "Jessica", "Amy", "Jonathan", "Ken", "Emily"];
+        let result = names.filter((item) => {
+            return item.length > 5;
+        })
+        result.forEach((item) => {
+            console.log(`名字：${item}，字數：${item.length}`);
+        })
+
+    </script>
+</body>
+</html>
