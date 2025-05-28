@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>練習 14 - 陣列 map/filter/reduce</title>
+</head>
+<body>
+  <script>
+    // 學生資料
+    let students = [
+      { name: "Jiajun", score: 85 },
+      { name: "Amy", score: 92 },
+      { name: "Ken", score: 68 },
+      { name: "Bella", score: 74 },
+      { name: "Leo", score: 90 }
+    ];
+
+    // TODO 1：找出及格的學生（score >= 70）
+    let passed = students.filter((student) => {
+      return student.score >= 70;
+    });
+
+    // TODO 2：建立分數清單陣列（"名字：分數 分"）
+    let scoreList = students.map((student) => {
+      return `${student.name}：${student.score} 分`;
+    });
+
+    // TODO 3：用 reduce 計算總分與平均
+    let totalScore = students.reduce((sum, student) => {
+      return sum + student.score;
+    }, 0);
+    let average = totalScore / students.length;
+
+    // ✅ 印出結果
+    console.log("及格學生：", passed.map(s => s.name));
+    console.log("分數清單：", scoreList);
+    console.log("總分：", totalScore);
+    console.log("平均：", average.toFixed(1));
+  </script>
+</body>
+</html>

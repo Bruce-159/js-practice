@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>練習 13 - 字串反轉與字元統計</title>
+</head>
+<body>
+  <script>
+    // 1. 使用 prompt 讓使用者輸入字串
+    let input = prompt("請輸入一段文字：");
+
+    // 2. 檢查是否為空（可選）
+    if (!input) {
+      alert("輸入不可為空！");
+    } else {
+      // 3. 將字串反轉
+      let reversed = input.split("").reverse().join("");
+      console.log(`反轉字串：${reversed}`);
+
+      // 4. 統計每個字元出現次數
+      let charCount = {};
+
+      for (let char of input) {
+        if (charCount[char]) {
+          charCount[char]++;
+        } else {
+          charCount[char] = 1;
+        }
+      }
+
+      // 5. 輸出統計結果
+      console.log("字元統計：");
+      for (let char in charCount) {
+        console.log(`${char}：${charCount[char]}`);
+      }
+    }
+  </script>
+</body>
+</html>
